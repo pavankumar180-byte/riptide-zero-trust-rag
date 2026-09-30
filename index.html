@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'><path fill='%2300d2ff' d='M0 128 C70.692 128 128 185.308 128 256 L64 256 C64 220.654 35.346 192 0 192 Z M256 192 C220.654 192 192 220.654 192 256 L128 256 C128 185.308 185.308 128 256 128 Z M128 0 C128 70.692 70.692 128 0 128 L0 64 C35.346 64 64 35.346 64 0 Z M192 0 C192 35.346 220.654 64 256 64 L256 128 C185.308 128 128 70.692 128 0 Z'/></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RIPTIDE — Zero-Trust Voice RAG & Aura AI</title>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#0c0c0c] text-white selection:bg-[#3D81E3]/30 antialiased overflow-x-hidden min-h-screen">
+    <!-- Global SVG Noise Filter (Root Level) -->
+    <svg class="sr-only" aria-hidden="true" width="0" height="0">
+      <defs>
+        <filter id="c3-noise">
+          <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" />
+          <feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.35 0" />
+          <feComposite in2="SourceGraphic" operator="in" result="noise" />
+          <feBlend in="SourceGraphic" in2="noise" mode="multiply" />
+        </filter>
+      </defs>
+    </svg>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
